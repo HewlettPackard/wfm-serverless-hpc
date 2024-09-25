@@ -1,0 +1,7 @@
+function_name,number_of_invocations
+srasearch-benchmark-start,1
+bowtie2-build,1
+fasterq-dump,120
+bowtie2,120
+merge,7
+srasearch-benchmark-finish,1

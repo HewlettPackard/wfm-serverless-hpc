@@ -1,0 +1,6 @@
+function_name,number_of_invocations
+blast-benchmark-start,1
+split,1
+blastall,245
+cat,2
+blast-benchmark-finish,1

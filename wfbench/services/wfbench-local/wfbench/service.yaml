@@ -1,0 +1,27 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: wfbench
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+      - name: wfbench
+        image: docker.io/andersonandrei/wfbench-knative:wfbench
+        volumeMounts:
+        - name: wfbench
+          mountPath: /data
+        resources:  
+          requests:
+            cpu: 1
+            memory: 1024M
+          limits:
+            cpu: 1
+            memory: 1024M               
+      volumes:
+      - name: wfbench
+        persistentVolumeClaim:
+          claimName: wfbench
+          readOnly: false
+      serviceAccountName: knative-rbac          

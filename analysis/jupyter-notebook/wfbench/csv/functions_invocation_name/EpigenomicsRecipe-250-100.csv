@@ -1,0 +1,11 @@
+function_name,number_of_invocations
+epigenomics-benchmark-start,1
+chr21,1
+mapMerge,2
+fast2bfq,60
+sol2sanger,60
+fastqSplit,1
+filterContams,60
+map,60
+pileup,1
+epigenomics-benchmark-finish,1

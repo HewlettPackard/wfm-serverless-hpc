@@ -1,0 +1,6 @@
+function_name,number_of_invocations
+bwa-benchmark-start,1
+fastq,1
+bwa,245
+cat,2
+bwa-benchmark-finish,1

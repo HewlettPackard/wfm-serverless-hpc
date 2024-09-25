@@ -1,0 +1,3780 @@
+{
+    "name": "Cycles-Benchmark",
+    "description": "Instance generated with WfCommons - https://wfcommons.org",
+    "createdAt": "2024-07-29T19:18:54.413470+02:00",
+    "schemaVersion": "1.4",
+    "author": {
+        "name": "dasilvaa",
+        "email": "support@wfcommons.org"
+    },
+    "wms": {
+        "name": "WfCommons",
+        "version": "1.1-dev",
+        "url": "https://docs.wfcommons.org/en/v1.1-dev/"
+    },
+    "workflow": {
+        "executedAt": "2024-07-29T19:18:54.413536+02:00",
+        "makespanInSeconds": 0,
+        "tasks": {
+            "cycles-benchmark-start": {
+                "name": "cycles-benchmark-start",
+                "type": "compute",
+                "command": {},
+                "parents": [],
+                "children": [
+                    "baseline_cycles_00000001",
+                    "baseline_cycles_00000005",
+                    "baseline_cycles_00000009",
+                    "baseline_cycles_00000013",
+                    "baseline_cycles_00000017",
+                    "baseline_cycles_00000021",
+                    "baseline_cycles_00000025",
+                    "baseline_cycles_00000029",
+                    "baseline_cycles_00000033",
+                    "baseline_cycles_00000037",
+                    "baseline_cycles_00000041",
+                    "baseline_cycles_00000045",
+                    "baseline_cycles_00000049",
+                    "baseline_cycles_00000053",
+                    "baseline_cycles_00000057",
+                    "baseline_cycles_00000061"
+                ],
+                "files": [],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000000",
+                "category": "initializing-workflow",
+                "startedAt": "2024-07-29T19:18:54.421401+02:00"
+            },
+            "baseline_cycles_00000001": {
+                "name": "baseline_cycles_00000001",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000001",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000001_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000001_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000002",
+                    "fertilizer_increase_cycles_00000003"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000001_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000001_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000001",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.421401+02:00"
+            },
+            "cycles_00000002": {
+                "name": "cycles_00000002",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000002",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000002_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000001_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000001"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000004",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000002_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000001_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000002",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.421645+02:00"
+            },
+            "fertilizer_increase_cycles_00000003": {
+                "name": "fertilizer_increase_cycles_00000003",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000003",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000003_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000001_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000001"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000004"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000003_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000001_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000003",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.421814+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000004": {
+                "name": "cycles_fertilizer_increase_output_parser_00000004",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000004",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000004_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000003_output.txt",
+                                "cycles_00000002_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000002",
+                    "fertilizer_increase_cycles_00000003"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000004_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000003_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000002_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000004",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.422652+02:00"
+            },
+            "baseline_cycles_00000005": {
+                "name": "baseline_cycles_00000005",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000005",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000005_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000005_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000006",
+                    "fertilizer_increase_cycles_00000007"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000005_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000005_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000005",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.422873+02:00"
+            },
+            "cycles_00000006": {
+                "name": "cycles_00000006",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000006",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000006_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000005_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000005"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000008",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000006_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000005_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000006",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.423066+02:00"
+            },
+            "fertilizer_increase_cycles_00000007": {
+                "name": "fertilizer_increase_cycles_00000007",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000007",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000007_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000005_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000005"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000008"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000007_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000005_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000007",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.423239+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000008": {
+                "name": "cycles_fertilizer_increase_output_parser_00000008",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000008",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000008_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000007_output.txt",
+                                "cycles_00000006_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000006",
+                    "fertilizer_increase_cycles_00000007"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000008_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000007_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000006_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000008",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.423796+02:00"
+            },
+            "baseline_cycles_00000009": {
+                "name": "baseline_cycles_00000009",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000009",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000009_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000009_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000010",
+                    "fertilizer_increase_cycles_00000011"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000009_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000009_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000009",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.423990+02:00"
+            },
+            "cycles_00000010": {
+                "name": "cycles_00000010",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000010",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000010_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000009_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000009"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000012",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000010_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000009_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000010",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.424158+02:00"
+            },
+            "fertilizer_increase_cycles_00000011": {
+                "name": "fertilizer_increase_cycles_00000011",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000011",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000011_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000009_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000009"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000012"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000011_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000009_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000011",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.424355+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000012": {
+                "name": "cycles_fertilizer_increase_output_parser_00000012",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000012",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000012_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000011_output.txt",
+                                "cycles_00000010_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000010",
+                    "fertilizer_increase_cycles_00000011"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000012_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000011_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000010_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000012",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.424880+02:00"
+            },
+            "baseline_cycles_00000013": {
+                "name": "baseline_cycles_00000013",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000013",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000013_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000013_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000014",
+                    "fertilizer_increase_cycles_00000015"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000013_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000013_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000013",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.425109+02:00"
+            },
+            "cycles_00000014": {
+                "name": "cycles_00000014",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000014",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000014_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000013_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000013"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000016",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000014_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000013_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000014",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.425287+02:00"
+            },
+            "fertilizer_increase_cycles_00000015": {
+                "name": "fertilizer_increase_cycles_00000015",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000015",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000015_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000013_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000013"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000016"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000015_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000013_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000015",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.425434+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000016": {
+                "name": "cycles_fertilizer_increase_output_parser_00000016",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000016",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000016_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000014_output.txt",
+                                "fertilizer_increase_cycles_00000015_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000014",
+                    "fertilizer_increase_cycles_00000015"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000016_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000014_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000015_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000016",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.425910+02:00"
+            },
+            "baseline_cycles_00000017": {
+                "name": "baseline_cycles_00000017",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000017",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000017_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000017_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000018",
+                    "fertilizer_increase_cycles_00000019"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000017_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000017_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000017",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.426076+02:00"
+            },
+            "cycles_00000018": {
+                "name": "cycles_00000018",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000018",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000018_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000017_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000017"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000020",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000018_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000017_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000018",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.426238+02:00"
+            },
+            "fertilizer_increase_cycles_00000019": {
+                "name": "fertilizer_increase_cycles_00000019",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000019",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000019_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000017_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000017"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000020"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000019_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000017_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000019",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.426388+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000020": {
+                "name": "cycles_fertilizer_increase_output_parser_00000020",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000020",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000020_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000018_output.txt",
+                                "fertilizer_increase_cycles_00000019_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000018",
+                    "fertilizer_increase_cycles_00000019"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000020_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000018_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000019_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000020",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.426845+02:00"
+            },
+            "baseline_cycles_00000021": {
+                "name": "baseline_cycles_00000021",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000021",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000021_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000021_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000022",
+                    "fertilizer_increase_cycles_00000023"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000021_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000021_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000021",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.427053+02:00"
+            },
+            "cycles_00000022": {
+                "name": "cycles_00000022",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000022",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000022_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000021_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000021"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000024",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000022_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000021_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000022",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.427274+02:00"
+            },
+            "fertilizer_increase_cycles_00000023": {
+                "name": "fertilizer_increase_cycles_00000023",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000023",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000023_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000021_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000021"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000024"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000023_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000021_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000023",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.427428+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000024": {
+                "name": "cycles_fertilizer_increase_output_parser_00000024",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000024",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000024_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000022_output.txt",
+                                "fertilizer_increase_cycles_00000023_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000022",
+                    "fertilizer_increase_cycles_00000023"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000024_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000022_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000023_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000024",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.427915+02:00"
+            },
+            "baseline_cycles_00000025": {
+                "name": "baseline_cycles_00000025",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000025",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000025_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000025_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000026",
+                    "fertilizer_increase_cycles_00000027"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000025_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000025_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000025",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.428072+02:00"
+            },
+            "cycles_00000026": {
+                "name": "cycles_00000026",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000026",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000026_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000025_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000025"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000028",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000026_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000025_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000026",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.428226+02:00"
+            },
+            "fertilizer_increase_cycles_00000027": {
+                "name": "fertilizer_increase_cycles_00000027",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000027",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000027_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000025_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000025"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000028"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000027_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000025_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000027",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.428393+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000028": {
+                "name": "cycles_fertilizer_increase_output_parser_00000028",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000028",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000028_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000026_output.txt",
+                                "fertilizer_increase_cycles_00000027_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000026",
+                    "fertilizer_increase_cycles_00000027"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000028_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000026_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000027_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000028",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.428876+02:00"
+            },
+            "baseline_cycles_00000029": {
+                "name": "baseline_cycles_00000029",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000029",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000029_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000029_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000030",
+                    "fertilizer_increase_cycles_00000031"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000029_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000029_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000029",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.429027+02:00"
+            },
+            "cycles_00000030": {
+                "name": "cycles_00000030",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000030",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000030_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000029_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000029"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000032",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000030_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000029_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000030",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.429170+02:00"
+            },
+            "fertilizer_increase_cycles_00000031": {
+                "name": "fertilizer_increase_cycles_00000031",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000031",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000031_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000029_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000029"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000032"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000031_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000029_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000031",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.429317+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000032": {
+                "name": "cycles_fertilizer_increase_output_parser_00000032",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000032",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000032_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000030_output.txt",
+                                "fertilizer_increase_cycles_00000031_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000030",
+                    "fertilizer_increase_cycles_00000031"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000032_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000030_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000031_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000032",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.429769+02:00"
+            },
+            "baseline_cycles_00000033": {
+                "name": "baseline_cycles_00000033",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000033",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000033_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000033_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000034",
+                    "fertilizer_increase_cycles_00000035"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000033_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000033_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000033",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.429921+02:00"
+            },
+            "cycles_00000034": {
+                "name": "cycles_00000034",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000034",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000034_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000033_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000033"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000036",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000034_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000033_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000034",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.430066+02:00"
+            },
+            "fertilizer_increase_cycles_00000035": {
+                "name": "fertilizer_increase_cycles_00000035",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000035",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000035_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000033_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000033"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000036"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000035_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000033_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000035",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.430244+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000036": {
+                "name": "cycles_fertilizer_increase_output_parser_00000036",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000036",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000036_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000034_output.txt",
+                                "fertilizer_increase_cycles_00000035_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000034",
+                    "fertilizer_increase_cycles_00000035"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000036_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000034_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000035_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000036",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.430765+02:00"
+            },
+            "baseline_cycles_00000037": {
+                "name": "baseline_cycles_00000037",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000037",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000037_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000037_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000038",
+                    "fertilizer_increase_cycles_00000039"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000037_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000037_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000037",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.430932+02:00"
+            },
+            "cycles_00000038": {
+                "name": "cycles_00000038",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000038",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000038_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000037_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000037"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000040",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000038_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000037_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000038",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.431077+02:00"
+            },
+            "fertilizer_increase_cycles_00000039": {
+                "name": "fertilizer_increase_cycles_00000039",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000039",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000039_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000037_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000037"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000040"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000039_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000037_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000039",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.431224+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000040": {
+                "name": "cycles_fertilizer_increase_output_parser_00000040",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000040",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000040_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000039_output.txt",
+                                "cycles_00000038_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000038",
+                    "fertilizer_increase_cycles_00000039"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000040_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000039_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000038_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000040",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.431682+02:00"
+            },
+            "baseline_cycles_00000041": {
+                "name": "baseline_cycles_00000041",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000041",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000041_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000041_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000042",
+                    "fertilizer_increase_cycles_00000043"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000041_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000041_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000041",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.431834+02:00"
+            },
+            "cycles_00000042": {
+                "name": "cycles_00000042",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000042",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000042_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000041_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000041"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000044",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000042_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000041_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000042",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.431977+02:00"
+            },
+            "fertilizer_increase_cycles_00000043": {
+                "name": "fertilizer_increase_cycles_00000043",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000043",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000043_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000041_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000041"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000044"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000043_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000041_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000043",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.432124+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000044": {
+                "name": "cycles_fertilizer_increase_output_parser_00000044",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000044",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000044_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000043_output.txt",
+                                "cycles_00000042_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000042",
+                    "fertilizer_increase_cycles_00000043"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000044_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000043_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000042_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000044",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.432651+02:00"
+            },
+            "baseline_cycles_00000045": {
+                "name": "baseline_cycles_00000045",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000045",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000045_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000045_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000046",
+                    "fertilizer_increase_cycles_00000047"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000045_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000045_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000045",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.432883+02:00"
+            },
+            "cycles_00000046": {
+                "name": "cycles_00000046",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000046",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000046_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000045_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000045"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000048",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000046_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000045_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000046",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.433040+02:00"
+            },
+            "fertilizer_increase_cycles_00000047": {
+                "name": "fertilizer_increase_cycles_00000047",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000047",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000047_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000045_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000045"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000048"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000047_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000045_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000047",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.433207+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000048": {
+                "name": "cycles_fertilizer_increase_output_parser_00000048",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000048",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000048_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000046_output.txt",
+                                "fertilizer_increase_cycles_00000047_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000046",
+                    "fertilizer_increase_cycles_00000047"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000048_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000046_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000047_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000048",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.433687+02:00"
+            },
+            "baseline_cycles_00000049": {
+                "name": "baseline_cycles_00000049",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000049",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000049_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000049_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000050",
+                    "fertilizer_increase_cycles_00000051"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000049_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000049_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000049",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.433859+02:00"
+            },
+            "cycles_00000050": {
+                "name": "cycles_00000050",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000050",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000050_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000049_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000049"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000052",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000050_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000049_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000050",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.505147+02:00"
+            },
+            "fertilizer_increase_cycles_00000051": {
+                "name": "fertilizer_increase_cycles_00000051",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000051",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000051_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000049_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000049"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000052"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000051_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000049_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000051",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.505417+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000052": {
+                "name": "cycles_fertilizer_increase_output_parser_00000052",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000052",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000052_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000051_output.txt",
+                                "cycles_00000050_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000050",
+                    "fertilizer_increase_cycles_00000051"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000052_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000051_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000050_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000052",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.505936+02:00"
+            },
+            "baseline_cycles_00000053": {
+                "name": "baseline_cycles_00000053",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000053",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000053_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000053_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000054",
+                    "fertilizer_increase_cycles_00000055"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000053_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000053_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000053",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.506104+02:00"
+            },
+            "cycles_00000054": {
+                "name": "cycles_00000054",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000054",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000054_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000053_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000053"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000056",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000054_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000053_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000054",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.506325+02:00"
+            },
+            "fertilizer_increase_cycles_00000055": {
+                "name": "fertilizer_increase_cycles_00000055",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000055",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000055_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000053_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000053"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000056"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000055_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000053_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000055",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.506483+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000056": {
+                "name": "cycles_fertilizer_increase_output_parser_00000056",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000056",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000056_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000055_output.txt",
+                                "cycles_00000054_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000054",
+                    "fertilizer_increase_cycles_00000055"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000056_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000055_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000054_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000056",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.506949+02:00"
+            },
+            "baseline_cycles_00000057": {
+                "name": "baseline_cycles_00000057",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000057",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000057_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000057_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000058",
+                    "fertilizer_increase_cycles_00000059"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000057_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000057_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000057",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.507112+02:00"
+            },
+            "cycles_00000058": {
+                "name": "cycles_00000058",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000058",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000058_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000057_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000057"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000060",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000058_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000057_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000058",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.507347+02:00"
+            },
+            "fertilizer_increase_cycles_00000059": {
+                "name": "fertilizer_increase_cycles_00000059",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000059",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000059_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000057_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000057"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000060"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000059_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000057_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000059",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.507559+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000060": {
+                "name": "cycles_fertilizer_increase_output_parser_00000060",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000060",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000060_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000058_output.txt",
+                                "fertilizer_increase_cycles_00000059_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000058",
+                    "fertilizer_increase_cycles_00000059"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000060_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000058_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000059_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000060",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.508484+02:00"
+            },
+            "baseline_cycles_00000061": {
+                "name": "baseline_cycles_00000061",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "baseline_cycles_00000061",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "baseline_cycles_00000061_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000061_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles-benchmark-start"
+                ],
+                "children": [
+                    "cycles_00000062",
+                    "fertilizer_increase_cycles_00000063"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "baseline_cycles_00000061_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000061_input.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000061",
+                "category": "baseline_cycles",
+                "startedAt": "2024-07-29T19:18:54.508892+02:00"
+            },
+            "cycles_00000062": {
+                "name": "cycles_00000062",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_00000062",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_00000062_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000061_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000061"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000064",
+                    "cycles_output_summary_00000065"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_00000062_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000061_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000062",
+                "category": "cycles",
+                "startedAt": "2024-07-29T19:18:54.509237+02:00"
+            },
+            "fertilizer_increase_cycles_00000063": {
+                "name": "fertilizer_increase_cycles_00000063",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fertilizer_increase_cycles_00000063",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "fertilizer_increase_cycles_00000063_output.txt": 120482
+                            },
+                            "inputs": [
+                                "baseline_cycles_00000061_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "baseline_cycles_00000061"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_parser_00000064"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fertilizer_increase_cycles_00000063_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000061_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000063",
+                "category": "fertilizer_increase_cycles",
+                "startedAt": "2024-07-29T19:18:54.509486+02:00"
+            },
+            "cycles_fertilizer_increase_output_parser_00000064": {
+                "name": "cycles_fertilizer_increase_output_parser_00000064",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_parser_00000064",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_parser_00000064_output.txt": 120482
+                            },
+                            "inputs": [
+                                "fertilizer_increase_cycles_00000063_output.txt",
+                                "cycles_00000062_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000062",
+                    "fertilizer_increase_cycles_00000063"
+                ],
+                "children": [
+                    "cycles_fertilizer_increase_output_summary_00000066"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_parser_00000064_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000063_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000062_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000064",
+                "category": "cycles_fertilizer_increase_output_parser",
+                "startedAt": "2024-07-29T19:18:54.510162+02:00"
+            },
+            "cycles_output_summary_00000065": {
+                "name": "cycles_output_summary_00000065",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_output_summary_00000065",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_output_summary_00000065_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_00000034_output.txt",
+                                "cycles_00000038_output.txt",
+                                "cycles_00000042_output.txt",
+                                "cycles_00000054_output.txt",
+                                "cycles_00000006_output.txt",
+                                "cycles_00000010_output.txt",
+                                "cycles_00000026_output.txt",
+                                "cycles_00000018_output.txt",
+                                "cycles_00000062_output.txt",
+                                "cycles_00000002_output.txt",
+                                "cycles_00000030_output.txt",
+                                "cycles_00000022_output.txt",
+                                "cycles_00000046_output.txt",
+                                "cycles_00000014_output.txt",
+                                "cycles_00000058_output.txt",
+                                "cycles_00000050_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_00000002",
+                    "cycles_00000006",
+                    "cycles_00000010",
+                    "cycles_00000014",
+                    "cycles_00000018",
+                    "cycles_00000022",
+                    "cycles_00000026",
+                    "cycles_00000030",
+                    "cycles_00000034",
+                    "cycles_00000038",
+                    "cycles_00000042",
+                    "cycles_00000046",
+                    "cycles_00000050",
+                    "cycles_00000054",
+                    "cycles_00000058",
+                    "cycles_00000062"
+                ],
+                "children": [
+                    "cycles_plots_00000067"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_output_summary_00000065_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000034_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000038_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000042_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000054_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000006_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000010_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000026_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000018_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000062_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000002_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000030_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000022_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000046_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000014_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000058_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000050_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000065",
+                "category": "cycles_output_summary",
+                "startedAt": "2024-07-29T19:18:54.510375+02:00"
+            },
+            "cycles_fertilizer_increase_output_summary_00000066": {
+                "name": "cycles_fertilizer_increase_output_summary_00000066",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_fertilizer_increase_output_summary_00000066",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_fertilizer_increase_output_summary_00000066_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_fertilizer_increase_output_parser_00000028_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000024_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000008_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000016_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000012_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000060_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000036_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000044_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000004_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000064_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000040_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000032_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000052_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000048_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000056_output.txt",
+                                "cycles_fertilizer_increase_output_parser_00000020_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_fertilizer_increase_output_parser_00000004",
+                    "cycles_fertilizer_increase_output_parser_00000008",
+                    "cycles_fertilizer_increase_output_parser_00000012",
+                    "cycles_fertilizer_increase_output_parser_00000016",
+                    "cycles_fertilizer_increase_output_parser_00000020",
+                    "cycles_fertilizer_increase_output_parser_00000024",
+                    "cycles_fertilizer_increase_output_parser_00000028",
+                    "cycles_fertilizer_increase_output_parser_00000032",
+                    "cycles_fertilizer_increase_output_parser_00000036",
+                    "cycles_fertilizer_increase_output_parser_00000040",
+                    "cycles_fertilizer_increase_output_parser_00000044",
+                    "cycles_fertilizer_increase_output_parser_00000048",
+                    "cycles_fertilizer_increase_output_parser_00000052",
+                    "cycles_fertilizer_increase_output_parser_00000056",
+                    "cycles_fertilizer_increase_output_parser_00000060",
+                    "cycles_fertilizer_increase_output_parser_00000064"
+                ],
+                "children": [
+                    "cycles-benchmark-finish"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_fertilizer_increase_output_summary_00000066_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000028_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000024_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000008_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000016_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000012_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000060_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000036_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000044_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000004_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000064_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000040_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000032_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000052_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000048_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000056_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000020_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000066",
+                "category": "cycles_fertilizer_increase_output_summary",
+                "startedAt": "2024-07-29T19:18:54.510586+02:00"
+            },
+            "cycles_plots_00000067": {
+                "name": "cycles_plots_00000067",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "cycles_plots_00000067",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 100,
+                            "out": {
+                                "cycles_plots_00000067_output.txt": 120482
+                            },
+                            "inputs": [
+                                "cycles_output_summary_00000065_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "cycles_output_summary_00000065"
+                ],
+                "children": [
+                    "cycles-benchmark-finish"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "cycles_plots_00000067_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_output_summary_00000065_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000067",
+                "category": "cycles_plots",
+                "startedAt": "2024-07-29T19:18:54.510701+02:00"
+            },
+            "cycles-benchmark-finish": {
+                "name": "cycles-benchmark-finish",
+                "type": "compute",
+                "command": {},
+                "parents": [
+                    "cycles_fertilizer_increase_output_summary_00000066",
+                    "cycles_plots_00000067"
+                ],
+                "children": [
+                    "cycles-benchmark-finish"
+                ],
+                "files": [
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000001_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000001_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000003_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000002_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000005_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000005_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000007_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000006_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000009_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000009_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000011_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000010_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000013_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000013_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000014_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000015_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000017_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000017_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000018_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000019_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000021_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000021_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000022_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000023_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000025_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000025_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000026_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000027_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000029_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000029_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000030_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000031_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000033_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000033_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000034_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000035_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000037_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000037_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000039_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000038_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000041_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000041_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000043_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000042_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000045_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000045_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000046_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000047_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000049_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000049_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000051_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000050_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000053_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000053_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000055_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000054_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000057_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000057_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000058_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000059_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000061_input.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "baseline_cycles_00000061_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "fertilizer_increase_cycles_00000063_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_00000062_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000028_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000024_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000008_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000016_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000012_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000060_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000036_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000044_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000004_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000064_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000040_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000032_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000052_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000048_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000056_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_fertilizer_increase_output_parser_00000020_output.txt",
+                        "sizeInBytes": 120482
+                    },
+                    {
+                        "link": "input",
+                        "name": "cycles_output_summary_00000065_output.txt",
+                        "sizeInBytes": 120482
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "69",
+                "category": "ending-workflow",
+                "startedAt": "2024-07-29T19:18:54.510586+02:00"
+            }
+        },
+        "workflow_data_locality": "../data",
+        "workflow_manager_data_locality": "/HSC/users/dasilvaa/wfbench/data",
+        "name": "cycles-benchmark-knative"
+    }
+}

@@ -1,0 +1,4249 @@
+{
+    "name": "Seismology-Benchmark",
+    "description": "Instance generated with WfCommons - https://wfcommons.org",
+    "createdAt": "2024-07-29T19:19:35.560215+02:00",
+    "schemaVersion": "1.4",
+    "author": {
+        "name": "dasilvaa",
+        "email": "support@wfcommons.org"
+    },
+    "wms": {
+        "name": "WfCommons",
+        "version": "1.1-dev",
+        "url": "https://docs.wfcommons.org/en/v1.1-dev/"
+    },
+    "workflow": {
+        "executedAt": "2024-07-29T19:19:35.560260+02:00",
+        "makespanInSeconds": 0,
+        "tasks": [
+            {
+                "name": "sG1IterDecon_00000001",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000001",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000001_output.txt': 49751}",
+                        "sG1IterDecon_00000001_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000001_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000001_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000001",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.568628+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000002",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000002",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000002_output.txt': 49751}",
+                        "sG1IterDecon_00000002_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000002_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000002_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000002",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.568898+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000003",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000003",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000003_output.txt': 49751}",
+                        "sG1IterDecon_00000003_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000003_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000003_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000003",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.569067+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000004",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000004",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000004_output.txt': 49751}",
+                        "sG1IterDecon_00000004_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000004_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000004_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000004",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.569234+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000005",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000005",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000005_output.txt': 49751}",
+                        "sG1IterDecon_00000005_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000005_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000005_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000005",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.569399+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000006",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000006",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000006_output.txt': 49751}",
+                        "sG1IterDecon_00000006_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000006_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000006_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000006",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.569562+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000007",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000007",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000007_output.txt': 49751}",
+                        "sG1IterDecon_00000007_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000007_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000007_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000007",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.569717+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000008",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000008",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000008_output.txt': 49751}",
+                        "sG1IterDecon_00000008_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000008_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000008_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000008",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.569905+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000009",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000009",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000009_output.txt': 49751}",
+                        "sG1IterDecon_00000009_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000009_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000009_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000009",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.570072+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000010",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000010",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000010_output.txt': 49751}",
+                        "sG1IterDecon_00000010_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000010_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000010_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000010",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.570308+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000011",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000011",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000011_output.txt': 49751}",
+                        "sG1IterDecon_00000011_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000011_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000011_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000011",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.570486+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000012",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000012",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000012_output.txt': 49751}",
+                        "sG1IterDecon_00000012_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000012_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000012_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000012",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.570640+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000013",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000013",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000013_output.txt': 49751}",
+                        "sG1IterDecon_00000013_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000013_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000013_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000013",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.570812+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000014",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000014",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000014_output.txt': 49751}",
+                        "sG1IterDecon_00000014_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000014_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000014_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000014",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.570953+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000015",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000015",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000015_output.txt': 49751}",
+                        "sG1IterDecon_00000015_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000015_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000015_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000015",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.571107+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000016",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000016",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000016_output.txt': 49751}",
+                        "sG1IterDecon_00000016_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000016_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000016_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000016",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.571258+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000017",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000017",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000017_output.txt': 49751}",
+                        "sG1IterDecon_00000017_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000017_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000017_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000017",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.571410+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000018",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000018",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000018_output.txt': 49751}",
+                        "sG1IterDecon_00000018_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000018_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000018_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000018",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.571560+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000019",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000019",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000019_output.txt': 49751}",
+                        "sG1IterDecon_00000019_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000019_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000019_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000019",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.571714+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000020",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000020",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000020_output.txt': 49751}",
+                        "sG1IterDecon_00000020_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000020_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000020_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000020",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.571888+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000021",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000021",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000021_output.txt': 49751}",
+                        "sG1IterDecon_00000021_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000021_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000021_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000021",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.572064+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000022",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000022",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000022_output.txt': 49751}",
+                        "sG1IterDecon_00000022_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000022_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000022_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000022",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.572220+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000023",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000023",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000023_output.txt': 49751}",
+                        "sG1IterDecon_00000023_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000023_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000023_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000023",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.572362+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000024",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000024",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000024_output.txt': 49751}",
+                        "sG1IterDecon_00000024_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000024_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000024_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000024",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.572498+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000025",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000025",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000025_output.txt': 49751}",
+                        "sG1IterDecon_00000025_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000025_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000025_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000025",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.572639+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000026",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000026",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000026_output.txt': 49751}",
+                        "sG1IterDecon_00000026_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000026_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000026_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000026",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.572780+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000027",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000027",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000027_output.txt': 49751}",
+                        "sG1IterDecon_00000027_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000027_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000027_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000027",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.572916+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000028",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000028",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000028_output.txt': 49751}",
+                        "sG1IterDecon_00000028_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000028_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000028_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000028",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.573049+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000029",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000029",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000029_output.txt': 49751}",
+                        "sG1IterDecon_00000029_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000029_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000029_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000029",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.573182+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000030",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000030",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000030_output.txt': 49751}",
+                        "sG1IterDecon_00000030_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000030_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000030_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000030",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.573331+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000031",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000031",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000031_output.txt': 49751}",
+                        "sG1IterDecon_00000031_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000031_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000031_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000031",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.573475+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000032",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000032",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000032_output.txt': 49751}",
+                        "sG1IterDecon_00000032_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000032_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000032_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000032",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.573628+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000033",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000033",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000033_output.txt': 49751}",
+                        "sG1IterDecon_00000033_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000033_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000033_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000033",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.573786+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000034",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000034",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000034_output.txt': 49751}",
+                        "sG1IterDecon_00000034_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000034_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000034_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000034",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.573964+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000035",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000035",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000035_output.txt': 49751}",
+                        "sG1IterDecon_00000035_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000035_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000035_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000035",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.574266+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000036",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000036",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000036_output.txt': 49751}",
+                        "sG1IterDecon_00000036_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000036_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000036_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000036",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.574619+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000037",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000037",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000037_output.txt': 49751}",
+                        "sG1IterDecon_00000037_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000037_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000037_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000037",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.574958+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000038",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000038",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000038_output.txt': 49751}",
+                        "sG1IterDecon_00000038_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000038_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000038_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000038",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.575277+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000039",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000039",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000039_output.txt': 49751}",
+                        "sG1IterDecon_00000039_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000039_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000039_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000039",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.575482+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000040",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000040",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000040_output.txt': 49751}",
+                        "sG1IterDecon_00000040_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000040_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000040_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000040",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.575716+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000041",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000041",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000041_output.txt': 49751}",
+                        "sG1IterDecon_00000041_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000041_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000041_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000041",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.576046+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000042",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000042",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000042_output.txt': 49751}",
+                        "sG1IterDecon_00000042_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000042_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000042_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000042",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.576293+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000043",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000043",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000043_output.txt': 49751}",
+                        "sG1IterDecon_00000043_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000043_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000043_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000043",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.576498+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000044",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000044",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000044_output.txt': 49751}",
+                        "sG1IterDecon_00000044_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000044_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000044_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000044",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.576686+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000045",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000045",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000045_output.txt': 49751}",
+                        "sG1IterDecon_00000045_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000045_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000045_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000045",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.576925+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000046",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000046",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000046_output.txt': 49751}",
+                        "sG1IterDecon_00000046_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000046_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000046_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000046",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.577087+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000047",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000047",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000047_output.txt': 49751}",
+                        "sG1IterDecon_00000047_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000047_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000047_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000047",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.577279+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000048",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000048",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000048_output.txt': 49751}",
+                        "sG1IterDecon_00000048_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000048_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000048_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000048",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.577478+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000049",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000049",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000049_output.txt': 49751}",
+                        "sG1IterDecon_00000049_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000049_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000049_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000049",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.577683+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000050",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000050",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000050_output.txt': 49751}",
+                        "sG1IterDecon_00000050_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000050_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000050_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000050",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.577906+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000051",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000051",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000051_output.txt': 49751}",
+                        "sG1IterDecon_00000051_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000051_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000051_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000051",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.578129+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000052",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000052",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000052_output.txt': 49751}",
+                        "sG1IterDecon_00000052_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000052_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000052_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000052",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.651574+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000053",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000053",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000053_output.txt': 49751}",
+                        "sG1IterDecon_00000053_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000053_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000053_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000053",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.651769+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000054",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000054",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000054_output.txt': 49751}",
+                        "sG1IterDecon_00000054_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000054_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000054_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000054",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.651945+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000055",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000055",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000055_output.txt': 49751}",
+                        "sG1IterDecon_00000055_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000055_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000055_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000055",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.652110+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000056",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000056",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000056_output.txt': 49751}",
+                        "sG1IterDecon_00000056_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000056_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000056_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000056",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.652262+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000057",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000057",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000057_output.txt': 49751}",
+                        "sG1IterDecon_00000057_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000057_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000057_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000057",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.652408+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000058",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000058",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000058_output.txt': 49751}",
+                        "sG1IterDecon_00000058_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000058_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000058_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000058",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.652563+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000059",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000059",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000059_output.txt': 49751}",
+                        "sG1IterDecon_00000059_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000059_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000059_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000059",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.652707+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000060",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000060",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000060_output.txt': 49751}",
+                        "sG1IterDecon_00000060_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000060_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000060_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000060",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.652847+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000061",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000061",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000061_output.txt': 49751}",
+                        "sG1IterDecon_00000061_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000061_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000061_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000061",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.652986+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000062",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000062",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000062_output.txt': 49751}",
+                        "sG1IterDecon_00000062_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000062_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000062_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000062",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.653138+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000063",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000063",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000063_output.txt': 49751}",
+                        "sG1IterDecon_00000063_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000063_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000063_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000063",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.653283+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000064",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000064",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000064_output.txt': 49751}",
+                        "sG1IterDecon_00000064_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000064_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000064_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000064",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.653430+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000065",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000065",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000065_output.txt': 49751}",
+                        "sG1IterDecon_00000065_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000065_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000065_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000065",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.653572+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000066",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000066",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000066_output.txt': 49751}",
+                        "sG1IterDecon_00000066_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000066_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000066_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000066",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.653724+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000067",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000067",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000067_output.txt': 49751}",
+                        "sG1IterDecon_00000067_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000067_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000067_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000067",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.653867+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000068",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000068",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000068_output.txt': 49751}",
+                        "sG1IterDecon_00000068_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000068_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000068_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000068",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.654003+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000069",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000069",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000069_output.txt': 49751}",
+                        "sG1IterDecon_00000069_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000069_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000069_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000069",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.654160+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000070",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000070",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000070_output.txt': 49751}",
+                        "sG1IterDecon_00000070_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000070_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000070_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000070",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.654339+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000071",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000071",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000071_output.txt': 49751}",
+                        "sG1IterDecon_00000071_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000071_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000071_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000071",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.654525+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000072",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000072",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000072_output.txt': 49751}",
+                        "sG1IterDecon_00000072_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000072_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000072_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000072",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.654681+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000073",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000073",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000073_output.txt': 49751}",
+                        "sG1IterDecon_00000073_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000073_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000073_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000073",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.654831+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000074",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000074",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000074_output.txt': 49751}",
+                        "sG1IterDecon_00000074_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000074_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000074_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000074",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.654980+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000075",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000075",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000075_output.txt': 49751}",
+                        "sG1IterDecon_00000075_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000075_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000075_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000075",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.655115+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000076",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000076",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000076_output.txt': 49751}",
+                        "sG1IterDecon_00000076_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000076_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000076_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000076",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.655254+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000077",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000077",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000077_output.txt': 49751}",
+                        "sG1IterDecon_00000077_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000077_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000077_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000077",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.655398+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000078",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000078",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000078_output.txt': 49751}",
+                        "sG1IterDecon_00000078_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000078_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000078_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000078",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.655537+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000079",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000079",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000079_output.txt': 49751}",
+                        "sG1IterDecon_00000079_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000079_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000079_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000079",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.655673+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000080",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000080",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000080_output.txt': 49751}",
+                        "sG1IterDecon_00000080_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000080_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000080_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000080",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.655831+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000081",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000081",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000081_output.txt': 49751}",
+                        "sG1IterDecon_00000081_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000081_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000081_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000081",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.655996+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000082",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000082",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000082_output.txt': 49751}",
+                        "sG1IterDecon_00000082_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000082_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000082_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000082",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.656132+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000083",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000083",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000083_output.txt': 49751}",
+                        "sG1IterDecon_00000083_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000083_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000083_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000083",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.656267+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000084",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000084",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000084_output.txt': 49751}",
+                        "sG1IterDecon_00000084_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000084_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000084_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000084",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.656411+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000085",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000085",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000085_output.txt': 49751}",
+                        "sG1IterDecon_00000085_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000085_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000085_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000085",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.656567+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000086",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000086",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000086_output.txt': 49751}",
+                        "sG1IterDecon_00000086_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000086_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000086_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000086",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.656706+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000087",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000087",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000087_output.txt': 49751}",
+                        "sG1IterDecon_00000087_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000087_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000087_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000087",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.656849+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000088",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000088",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000088_output.txt': 49751}",
+                        "sG1IterDecon_00000088_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000088_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000088_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000088",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.656996+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000089",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000089",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000089_output.txt': 49751}",
+                        "sG1IterDecon_00000089_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000089_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000089_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000089",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.657142+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000090",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000090",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000090_output.txt': 49751}",
+                        "sG1IterDecon_00000090_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000090_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000090_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000090",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.657299+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000091",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000091",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000091_output.txt': 49751}",
+                        "sG1IterDecon_00000091_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000091_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000091_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000091",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.657455+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000092",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000092",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000092_output.txt': 49751}",
+                        "sG1IterDecon_00000092_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000092_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000092_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000092",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.657623+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000093",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000093",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000093_output.txt': 49751}",
+                        "sG1IterDecon_00000093_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000093_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000093_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000093",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.657803+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000094",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000094",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000094_output.txt': 49751}",
+                        "sG1IterDecon_00000094_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000094_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000094_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000094",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.658039+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000095",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000095",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000095_output.txt': 49751}",
+                        "sG1IterDecon_00000095_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000095_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000095_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000095",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.658300+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000096",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000096",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000096_output.txt': 49751}",
+                        "sG1IterDecon_00000096_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000096_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000096_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000096",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.658493+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000097",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000097",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000097_output.txt': 49751}",
+                        "sG1IterDecon_00000097_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000097_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000097_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000097",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.658657+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000098",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000098",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000098_output.txt': 49751}",
+                        "sG1IterDecon_00000098_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000098_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000098_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000098",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.658805+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000099",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000099",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000099_output.txt': 49751}",
+                        "sG1IterDecon_00000099_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000099_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000099_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000099",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.658949+02:00"
+            },
+            {
+                "name": "sG1IterDecon_00000100",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "sG1IterDecon_00000100",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'sG1IterDecon_00000100_output.txt': 49751}",
+                        "sG1IterDecon_00000100_input.txt"
+                    ]
+                },
+                "parents": [],
+                "children": [
+                    "wrapper_siftSTFByMisfit_00000101"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "sG1IterDecon_00000100_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000100_input.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000100",
+                "category": "sG1IterDecon",
+                "startedAt": "2024-07-29T19:19:35.659096+02:00"
+            },
+            {
+                "name": "wrapper_siftSTFByMisfit_00000101",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        "wrapper_siftSTFByMisfit_00000101",
+                        "--percent-cpu 0.9",
+                        "--cpu-work 100",
+                        "--out {'wrapper_siftSTFByMisfit_00000101_output.txt': 49751}",
+                        "sG1IterDecon_00000092_output.txt",
+                        "sG1IterDecon_00000025_output.txt",
+                        "sG1IterDecon_00000012_output.txt",
+                        "sG1IterDecon_00000080_output.txt",
+                        "sG1IterDecon_00000062_output.txt",
+                        "sG1IterDecon_00000091_output.txt",
+                        "sG1IterDecon_00000050_output.txt",
+                        "sG1IterDecon_00000088_output.txt",
+                        "sG1IterDecon_00000039_output.txt",
+                        "sG1IterDecon_00000013_output.txt",
+                        "sG1IterDecon_00000096_output.txt",
+                        "sG1IterDecon_00000028_output.txt",
+                        "sG1IterDecon_00000044_output.txt",
+                        "sG1IterDecon_00000035_output.txt",
+                        "sG1IterDecon_00000011_output.txt",
+                        "sG1IterDecon_00000082_output.txt",
+                        "sG1IterDecon_00000076_output.txt",
+                        "sG1IterDecon_00000081_output.txt",
+                        "sG1IterDecon_00000020_output.txt",
+                        "sG1IterDecon_00000073_output.txt",
+                        "sG1IterDecon_00000041_output.txt",
+                        "sG1IterDecon_00000065_output.txt",
+                        "sG1IterDecon_00000071_output.txt",
+                        "sG1IterDecon_00000049_output.txt",
+                        "sG1IterDecon_00000022_output.txt",
+                        "sG1IterDecon_00000026_output.txt",
+                        "sG1IterDecon_00000008_output.txt",
+                        "sG1IterDecon_00000059_output.txt",
+                        "sG1IterDecon_00000004_output.txt",
+                        "sG1IterDecon_00000069_output.txt",
+                        "sG1IterDecon_00000075_output.txt",
+                        "sG1IterDecon_00000097_output.txt",
+                        "sG1IterDecon_00000098_output.txt",
+                        "sG1IterDecon_00000031_output.txt",
+                        "sG1IterDecon_00000099_output.txt",
+                        "sG1IterDecon_00000063_output.txt",
+                        "sG1IterDecon_00000038_output.txt",
+                        "sG1IterDecon_00000051_output.txt",
+                        "sG1IterDecon_00000021_output.txt",
+                        "sG1IterDecon_00000067_output.txt",
+                        "sG1IterDecon_00000085_output.txt",
+                        "sG1IterDecon_00000052_output.txt",
+                        "sG1IterDecon_00000032_output.txt",
+                        "sG1IterDecon_00000046_output.txt",
+                        "sG1IterDecon_00000048_output.txt",
+                        "sG1IterDecon_00000094_output.txt",
+                        "sG1IterDecon_00000009_output.txt",
+                        "sG1IterDecon_00000005_output.txt",
+                        "sG1IterDecon_00000086_output.txt",
+                        "sG1IterDecon_00000087_output.txt",
+                        "sG1IterDecon_00000024_output.txt",
+                        "sG1IterDecon_00000100_output.txt",
+                        "sG1IterDecon_00000057_output.txt",
+                        "sG1IterDecon_00000036_output.txt",
+                        "sG1IterDecon_00000055_output.txt",
+                        "sG1IterDecon_00000077_output.txt",
+                        "sG1IterDecon_00000018_output.txt",
+                        "sG1IterDecon_00000002_output.txt",
+                        "sG1IterDecon_00000023_output.txt",
+                        "sG1IterDecon_00000029_output.txt",
+                        "sG1IterDecon_00000034_output.txt",
+                        "sG1IterDecon_00000037_output.txt",
+                        "sG1IterDecon_00000078_output.txt",
+                        "sG1IterDecon_00000061_output.txt",
+                        "sG1IterDecon_00000040_output.txt",
+                        "sG1IterDecon_00000095_output.txt",
+                        "sG1IterDecon_00000014_output.txt",
+                        "sG1IterDecon_00000079_output.txt",
+                        "sG1IterDecon_00000042_output.txt",
+                        "sG1IterDecon_00000093_output.txt",
+                        "sG1IterDecon_00000003_output.txt",
+                        "sG1IterDecon_00000033_output.txt",
+                        "sG1IterDecon_00000006_output.txt",
+                        "sG1IterDecon_00000054_output.txt",
+                        "sG1IterDecon_00000015_output.txt",
+                        "sG1IterDecon_00000027_output.txt",
+                        "sG1IterDecon_00000068_output.txt",
+                        "sG1IterDecon_00000019_output.txt",
+                        "sG1IterDecon_00000083_output.txt",
+                        "sG1IterDecon_00000058_output.txt",
+                        "sG1IterDecon_00000010_output.txt",
+                        "sG1IterDecon_00000070_output.txt",
+                        "sG1IterDecon_00000072_output.txt",
+                        "sG1IterDecon_00000074_output.txt",
+                        "sG1IterDecon_00000090_output.txt",
+                        "sG1IterDecon_00000030_output.txt",
+                        "sG1IterDecon_00000045_output.txt",
+                        "sG1IterDecon_00000007_output.txt",
+                        "sG1IterDecon_00000001_output.txt",
+                        "sG1IterDecon_00000043_output.txt",
+                        "sG1IterDecon_00000056_output.txt",
+                        "sG1IterDecon_00000047_output.txt",
+                        "sG1IterDecon_00000064_output.txt",
+                        "sG1IterDecon_00000053_output.txt",
+                        "sG1IterDecon_00000066_output.txt",
+                        "sG1IterDecon_00000089_output.txt",
+                        "sG1IterDecon_00000017_output.txt",
+                        "sG1IterDecon_00000084_output.txt",
+                        "sG1IterDecon_00000016_output.txt",
+                        "sG1IterDecon_00000060_output.txt"
+                    ]
+                },
+                "parents": [
+                    "sG1IterDecon_00000001",
+                    "sG1IterDecon_00000002",
+                    "sG1IterDecon_00000003",
+                    "sG1IterDecon_00000004",
+                    "sG1IterDecon_00000005",
+                    "sG1IterDecon_00000006",
+                    "sG1IterDecon_00000007",
+                    "sG1IterDecon_00000008",
+                    "sG1IterDecon_00000009",
+                    "sG1IterDecon_00000010",
+                    "sG1IterDecon_00000011",
+                    "sG1IterDecon_00000012",
+                    "sG1IterDecon_00000013",
+                    "sG1IterDecon_00000014",
+                    "sG1IterDecon_00000015",
+                    "sG1IterDecon_00000016",
+                    "sG1IterDecon_00000017",
+                    "sG1IterDecon_00000018",
+                    "sG1IterDecon_00000019",
+                    "sG1IterDecon_00000020",
+                    "sG1IterDecon_00000021",
+                    "sG1IterDecon_00000022",
+                    "sG1IterDecon_00000023",
+                    "sG1IterDecon_00000024",
+                    "sG1IterDecon_00000025",
+                    "sG1IterDecon_00000026",
+                    "sG1IterDecon_00000027",
+                    "sG1IterDecon_00000028",
+                    "sG1IterDecon_00000029",
+                    "sG1IterDecon_00000030",
+                    "sG1IterDecon_00000031",
+                    "sG1IterDecon_00000032",
+                    "sG1IterDecon_00000033",
+                    "sG1IterDecon_00000034",
+                    "sG1IterDecon_00000035",
+                    "sG1IterDecon_00000036",
+                    "sG1IterDecon_00000037",
+                    "sG1IterDecon_00000038",
+                    "sG1IterDecon_00000039",
+                    "sG1IterDecon_00000040",
+                    "sG1IterDecon_00000041",
+                    "sG1IterDecon_00000042",
+                    "sG1IterDecon_00000043",
+                    "sG1IterDecon_00000044",
+                    "sG1IterDecon_00000045",
+                    "sG1IterDecon_00000046",
+                    "sG1IterDecon_00000047",
+                    "sG1IterDecon_00000048",
+                    "sG1IterDecon_00000049",
+                    "sG1IterDecon_00000050",
+                    "sG1IterDecon_00000051",
+                    "sG1IterDecon_00000052",
+                    "sG1IterDecon_00000053",
+                    "sG1IterDecon_00000054",
+                    "sG1IterDecon_00000055",
+                    "sG1IterDecon_00000056",
+                    "sG1IterDecon_00000057",
+                    "sG1IterDecon_00000058",
+                    "sG1IterDecon_00000059",
+                    "sG1IterDecon_00000060",
+                    "sG1IterDecon_00000061",
+                    "sG1IterDecon_00000062",
+                    "sG1IterDecon_00000063",
+                    "sG1IterDecon_00000064",
+                    "sG1IterDecon_00000065",
+                    "sG1IterDecon_00000066",
+                    "sG1IterDecon_00000067",
+                    "sG1IterDecon_00000068",
+                    "sG1IterDecon_00000069",
+                    "sG1IterDecon_00000070",
+                    "sG1IterDecon_00000071",
+                    "sG1IterDecon_00000072",
+                    "sG1IterDecon_00000073",
+                    "sG1IterDecon_00000074",
+                    "sG1IterDecon_00000075",
+                    "sG1IterDecon_00000076",
+                    "sG1IterDecon_00000077",
+                    "sG1IterDecon_00000078",
+                    "sG1IterDecon_00000079",
+                    "sG1IterDecon_00000080",
+                    "sG1IterDecon_00000081",
+                    "sG1IterDecon_00000082",
+                    "sG1IterDecon_00000083",
+                    "sG1IterDecon_00000084",
+                    "sG1IterDecon_00000085",
+                    "sG1IterDecon_00000086",
+                    "sG1IterDecon_00000087",
+                    "sG1IterDecon_00000088",
+                    "sG1IterDecon_00000089",
+                    "sG1IterDecon_00000090",
+                    "sG1IterDecon_00000091",
+                    "sG1IterDecon_00000092",
+                    "sG1IterDecon_00000093",
+                    "sG1IterDecon_00000094",
+                    "sG1IterDecon_00000095",
+                    "sG1IterDecon_00000096",
+                    "sG1IterDecon_00000097",
+                    "sG1IterDecon_00000098",
+                    "sG1IterDecon_00000099",
+                    "sG1IterDecon_00000100"
+                ],
+                "children": [],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "wrapper_siftSTFByMisfit_00000101_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000092_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000025_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000012_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000080_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000062_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000091_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000050_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000088_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000039_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000013_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000096_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000028_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000044_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000035_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000011_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000082_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000076_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000081_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000020_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000073_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000041_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000065_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000071_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000049_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000022_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000026_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000008_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000059_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000004_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000069_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000075_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000097_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000098_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000031_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000099_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000063_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000038_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000051_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000021_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000067_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000085_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000052_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000032_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000046_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000048_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000094_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000009_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000005_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000086_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000087_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000024_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000100_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000057_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000036_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000055_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000077_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000018_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000002_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000023_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000029_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000034_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000037_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000078_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000061_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000040_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000095_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000014_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000079_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000042_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000093_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000003_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000033_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000006_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000054_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000015_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000027_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000068_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000019_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000083_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000058_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000010_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000070_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000072_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000074_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000090_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000030_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000045_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000007_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000001_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000043_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000056_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000047_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000064_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000053_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000066_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000089_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000017_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000084_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000016_output.txt",
+                        "sizeInBytes": 49751
+                    },
+                    {
+                        "link": "input",
+                        "name": "sG1IterDecon_00000060_output.txt",
+                        "sizeInBytes": 49751
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000101",
+                "category": "wrapper_siftSTFByMisfit",
+                "startedAt": "2024-07-29T19:19:35.659225+02:00"
+            }
+        ]
+    }
+}

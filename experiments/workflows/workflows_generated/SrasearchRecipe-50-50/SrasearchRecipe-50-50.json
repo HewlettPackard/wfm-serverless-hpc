@@ -1,0 +1,2884 @@
+{
+    "name": "Srasearch-Benchmark",
+    "description": "Instance generated with WfCommons - https://wfcommons.org",
+    "createdAt": "2024-07-29T19:18:13.064952+02:00",
+    "schemaVersion": "1.4",
+    "author": {
+        "name": "dasilvaa",
+        "email": "support@wfcommons.org"
+    },
+    "wms": {
+        "name": "WfCommons",
+        "version": "1.1-dev",
+        "url": "https://docs.wfcommons.org/en/v1.1-dev/"
+    },
+    "workflow": {
+        "executedAt": "2024-07-29T19:18:13.064993+02:00",
+        "makespanInSeconds": 0,
+        "tasks": {
+            "srasearch-benchmark-start": {
+                "name": "srasearch-benchmark-start",
+                "type": "compute",
+                "command": {},
+                "parents": [],
+                "children": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000002",
+                    "fasterq-dump_00000004",
+                    "fasterq-dump_00000006",
+                    "fasterq-dump_00000008",
+                    "fasterq-dump_00000010",
+                    "fasterq-dump_00000012",
+                    "fasterq-dump_00000014",
+                    "fasterq-dump_00000016",
+                    "fasterq-dump_00000018",
+                    "fasterq-dump_00000020",
+                    "fasterq-dump_00000024",
+                    "fasterq-dump_00000026",
+                    "fasterq-dump_00000028",
+                    "fasterq-dump_00000030",
+                    "fasterq-dump_00000032",
+                    "fasterq-dump_00000034",
+                    "fasterq-dump_00000036",
+                    "fasterq-dump_00000037",
+                    "fasterq-dump_00000040",
+                    "fasterq-dump_00000042",
+                    "fasterq-dump_00000043",
+                    "fasterq-dump_00000045",
+                    "fasterq-dump_00000048"
+                ],
+                "files": [],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000000",
+                "category": "initializing-workflow",
+                "startedAt": "2024-07-29T19:18:13.072134+02:00"
+            },
+            "bowtie2-build_00000001": {
+                "name": "bowtie2-build_00000001",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2-build_00000001",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2-build_00000001_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000003",
+                    "bowtie2_00000005",
+                    "bowtie2_00000007",
+                    "bowtie2_00000009",
+                    "bowtie2_00000011",
+                    "bowtie2_00000013",
+                    "bowtie2_00000015",
+                    "bowtie2_00000017",
+                    "bowtie2_00000019",
+                    "bowtie2_00000021",
+                    "bowtie2_00000023",
+                    "bowtie2_00000025",
+                    "bowtie2_00000027",
+                    "bowtie2_00000029",
+                    "bowtie2_00000031",
+                    "bowtie2_00000033",
+                    "bowtie2_00000035",
+                    "bowtie2_00000038",
+                    "bowtie2_00000039",
+                    "bowtie2_00000041",
+                    "bowtie2_00000044",
+                    "bowtie2_00000046",
+                    "bowtie2_00000047"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000001",
+                "category": "bowtie2-build",
+                "startedAt": "2024-07-29T19:18:13.072134+02:00"
+            },
+            "fasterq-dump_00000002": {
+                "name": "fasterq-dump_00000002",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000002",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000002_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000002_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000003"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000002_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000002_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000002",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.072278+02:00"
+            },
+            "bowtie2_00000003": {
+                "name": "bowtie2_00000003",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000003",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000003_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000002_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000002"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000003_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000002_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000003",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.072377+02:00"
+            },
+            "fasterq-dump_00000004": {
+                "name": "fasterq-dump_00000004",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000004",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000004_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000004_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000005"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000004_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000004_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000004",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.072472+02:00"
+            },
+            "bowtie2_00000005": {
+                "name": "bowtie2_00000005",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000005",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000005_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000004_output.txt",
+                                "bowtie2-build_00000001_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000004"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000005_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000004_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000005",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.072558+02:00"
+            },
+            "fasterq-dump_00000006": {
+                "name": "fasterq-dump_00000006",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000006",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000006_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000006_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000007"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000006_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000006_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000006",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.072648+02:00"
+            },
+            "bowtie2_00000007": {
+                "name": "bowtie2_00000007",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000007",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000007_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000006_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000006"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000007_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000006_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000007",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.072734+02:00"
+            },
+            "fasterq-dump_00000008": {
+                "name": "fasterq-dump_00000008",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000008",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000008_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000008_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000009"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000008_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000008_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000008",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.072824+02:00"
+            },
+            "bowtie2_00000009": {
+                "name": "bowtie2_00000009",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000009",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000009_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000008_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000008"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000009_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000008_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000009",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.072909+02:00"
+            },
+            "fasterq-dump_00000010": {
+                "name": "fasterq-dump_00000010",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000010",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000010_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000010_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000011"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000010_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000010_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000010",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.072998+02:00"
+            },
+            "bowtie2_00000011": {
+                "name": "bowtie2_00000011",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000011",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000011_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000010_output.txt",
+                                "bowtie2-build_00000001_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000010"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000011_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000010_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000011",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.073082+02:00"
+            },
+            "fasterq-dump_00000012": {
+                "name": "fasterq-dump_00000012",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000012",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000012_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000012_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000013"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000012_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000012_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000012",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.073174+02:00"
+            },
+            "bowtie2_00000013": {
+                "name": "bowtie2_00000013",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000013",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000013_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000012_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000012"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000013_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000012_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000013",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.073256+02:00"
+            },
+            "fasterq-dump_00000014": {
+                "name": "fasterq-dump_00000014",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000014",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000014_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000014_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000015"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000014_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000014_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000014",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.073342+02:00"
+            },
+            "bowtie2_00000015": {
+                "name": "bowtie2_00000015",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000015",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000015_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000014_output.txt",
+                                "bowtie2-build_00000001_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000014"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000015_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000014_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000015",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.073424+02:00"
+            },
+            "fasterq-dump_00000016": {
+                "name": "fasterq-dump_00000016",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000016",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000016_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000016_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000017"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000016_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000016_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000016",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.073514+02:00"
+            },
+            "bowtie2_00000017": {
+                "name": "bowtie2_00000017",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000017",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000017_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000016_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000016"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000017_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000016_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000017",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.073598+02:00"
+            },
+            "fasterq-dump_00000018": {
+                "name": "fasterq-dump_00000018",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000018",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000018_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000018_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000019"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000018_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000018_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000018",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.073684+02:00"
+            },
+            "bowtie2_00000019": {
+                "name": "bowtie2_00000019",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000019",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000019_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000018_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000018"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000019_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000018_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000019",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.073767+02:00"
+            },
+            "fasterq-dump_00000020": {
+                "name": "fasterq-dump_00000020",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000020",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000020_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000020_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000021"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000020_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000020_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000020",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.073867+02:00"
+            },
+            "bowtie2_00000021": {
+                "name": "bowtie2_00000021",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000021",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000021_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000020_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000020"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000021_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000020_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000021",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.073953+02:00"
+            },
+            "merge_00000022": {
+                "name": "merge_00000022",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "merge_00000022",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "merge_00000022_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2_00000011_output.txt",
+                                "bowtie2_00000003_output.txt",
+                                "bowtie2_00000025_output.txt",
+                                "bowtie2_00000047_output.txt",
+                                "bowtie2_00000041_output.txt",
+                                "bowtie2_00000044_output.txt",
+                                "bowtie2_00000023_output.txt",
+                                "bowtie2_00000015_output.txt",
+                                "bowtie2_00000013_output.txt",
+                                "bowtie2_00000035_output.txt",
+                                "bowtie2_00000031_output.txt",
+                                "bowtie2_00000021_output.txt",
+                                "bowtie2_00000046_output.txt",
+                                "bowtie2_00000029_output.txt",
+                                "bowtie2_00000027_output.txt",
+                                "bowtie2_00000038_output.txt",
+                                "bowtie2_00000033_output.txt",
+                                "bowtie2_00000007_output.txt",
+                                "bowtie2_00000009_output.txt",
+                                "bowtie2_00000005_output.txt",
+                                "bowtie2_00000019_output.txt",
+                                "bowtie2_00000017_output.txt",
+                                "bowtie2_00000039_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2_00000003",
+                    "bowtie2_00000005",
+                    "bowtie2_00000007",
+                    "bowtie2_00000009",
+                    "bowtie2_00000011",
+                    "bowtie2_00000013",
+                    "bowtie2_00000015",
+                    "bowtie2_00000017",
+                    "bowtie2_00000019",
+                    "bowtie2_00000021",
+                    "bowtie2_00000023",
+                    "bowtie2_00000025",
+                    "bowtie2_00000027",
+                    "bowtie2_00000029",
+                    "bowtie2_00000031",
+                    "bowtie2_00000033",
+                    "bowtie2_00000035",
+                    "bowtie2_00000038",
+                    "bowtie2_00000039",
+                    "bowtie2_00000041",
+                    "bowtie2_00000044",
+                    "bowtie2_00000046",
+                    "bowtie2_00000047"
+                ],
+                "children": [
+                    "srasearch-benchmark-finish"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "merge_00000022_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000011_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000003_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000025_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000047_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000041_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000044_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000023_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000015_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000013_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000035_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000031_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000021_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000046_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000029_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000027_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000038_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000033_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000007_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000009_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000005_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000019_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000017_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000039_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000022",
+                "category": "merge",
+                "startedAt": "2024-07-29T19:18:13.074043+02:00"
+            },
+            "bowtie2_00000023": {
+                "name": "bowtie2_00000023",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000023",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000023_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000024_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000024"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000023_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000024_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000023",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.074129+02:00"
+            },
+            "fasterq-dump_00000024": {
+                "name": "fasterq-dump_00000024",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000024",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000024_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000024_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000023"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000024_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000024_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000024",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.074237+02:00"
+            },
+            "bowtie2_00000025": {
+                "name": "bowtie2_00000025",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000025",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000025_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000026_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000026"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000025_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000026_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000025",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.074346+02:00"
+            },
+            "fasterq-dump_00000026": {
+                "name": "fasterq-dump_00000026",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000026",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000026_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000026_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000025"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000026_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000026_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000026",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.074436+02:00"
+            },
+            "bowtie2_00000027": {
+                "name": "bowtie2_00000027",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000027",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000027_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000028_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000028"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000027_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000028_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000027",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.074518+02:00"
+            },
+            "fasterq-dump_00000028": {
+                "name": "fasterq-dump_00000028",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000028",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000028_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000028_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000027"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000028_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000028_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000028",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.074610+02:00"
+            },
+            "bowtie2_00000029": {
+                "name": "bowtie2_00000029",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000029",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000029_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000030_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000030"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000029_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000030_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000029",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.074696+02:00"
+            },
+            "fasterq-dump_00000030": {
+                "name": "fasterq-dump_00000030",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000030",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000030_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000030_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000029"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000030_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000030_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000030",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.074798+02:00"
+            },
+            "bowtie2_00000031": {
+                "name": "bowtie2_00000031",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000031",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000031_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000032_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000032"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000031_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000032_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000031",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.074885+02:00"
+            },
+            "fasterq-dump_00000032": {
+                "name": "fasterq-dump_00000032",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000032",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000032_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000032_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000031"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000032_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000032_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000032",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.074978+02:00"
+            },
+            "bowtie2_00000033": {
+                "name": "bowtie2_00000033",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000033",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000033_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000034_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000034"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000033_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000034_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000033",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.075118+02:00"
+            },
+            "fasterq-dump_00000034": {
+                "name": "fasterq-dump_00000034",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000034",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000034_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000034_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000033"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000034_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000034_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000034",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.075304+02:00"
+            },
+            "bowtie2_00000035": {
+                "name": "bowtie2_00000035",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000035",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000035_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000036_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000036"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000035_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000036_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000035",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.075462+02:00"
+            },
+            "fasterq-dump_00000036": {
+                "name": "fasterq-dump_00000036",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000036",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000036_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000036_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000035"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000036_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000036_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000036",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.075623+02:00"
+            },
+            "fasterq-dump_00000037": {
+                "name": "fasterq-dump_00000037",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000037",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000037_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000037_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000038"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000037_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000037_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000037",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.075751+02:00"
+            },
+            "bowtie2_00000038": {
+                "name": "bowtie2_00000038",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000038",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000038_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000037_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000037"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000038_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000037_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000038",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.075891+02:00"
+            },
+            "bowtie2_00000039": {
+                "name": "bowtie2_00000039",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000039",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000039_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000040_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000040"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000039_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000040_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000039",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.076065+02:00"
+            },
+            "fasterq-dump_00000040": {
+                "name": "fasterq-dump_00000040",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000040",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000040_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000040_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000039"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000040_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000040_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000040",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.076175+02:00"
+            },
+            "bowtie2_00000041": {
+                "name": "bowtie2_00000041",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000041",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000041_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000042_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000042"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000041_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000042_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000041",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.076288+02:00"
+            },
+            "fasterq-dump_00000042": {
+                "name": "fasterq-dump_00000042",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000042",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000042_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000042_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000041"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000042_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000042_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000042",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.076396+02:00"
+            },
+            "fasterq-dump_00000043": {
+                "name": "fasterq-dump_00000043",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000043",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000043_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000043_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000044"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000043_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000043_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000043",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.076503+02:00"
+            },
+            "bowtie2_00000044": {
+                "name": "bowtie2_00000044",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000044",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000044_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000043_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000043"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000044_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000043_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000044",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.076593+02:00"
+            },
+            "fasterq-dump_00000045": {
+                "name": "fasterq-dump_00000045",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000045",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000045_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000045_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000046"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000045_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000045_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000045",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.076687+02:00"
+            },
+            "bowtie2_00000046": {
+                "name": "bowtie2_00000046",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000046",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000046_output.txt": 138889
+                            },
+                            "inputs": [
+                                "bowtie2-build_00000001_output.txt",
+                                "fasterq-dump_00000045_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000045"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000046_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000045_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000046",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.076797+02:00"
+            },
+            "bowtie2_00000047": {
+                "name": "bowtie2_00000047",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "bowtie2_00000047",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "bowtie2_00000047_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000048_output.txt",
+                                "bowtie2-build_00000001_output.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "bowtie2-build_00000001",
+                    "fasterq-dump_00000048"
+                ],
+                "children": [
+                    "merge_00000022"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "bowtie2_00000047_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000048_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000047",
+                "category": "bowtie2",
+                "startedAt": "2024-07-29T19:18:13.076896+02:00"
+            },
+            "fasterq-dump_00000048": {
+                "name": "fasterq-dump_00000048",
+                "type": "compute",
+                "command": {
+                    "program": "wfbench.py",
+                    "arguments": [
+                        {
+                            "name": "fasterq-dump_00000048",
+                            "percent-cpu": 0.9,
+                            "cpu-work": 50,
+                            "out": {
+                                "fasterq-dump_00000048_output.txt": 138889
+                            },
+                            "inputs": [
+                                "fasterq-dump_00000048_input.txt"
+                            ]
+                        }
+                    ],
+                    "api_url": "http://wfbench.knative-functions.10.106.193.156.sslip.io/wfbench"
+                },
+                "parents": [
+                    "srasearch-benchmark-start"
+                ],
+                "children": [
+                    "bowtie2_00000047"
+                ],
+                "files": [
+                    {
+                        "link": "output",
+                        "name": "fasterq-dump_00000048_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000048_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "00000048",
+                "category": "fasterq-dump",
+                "startedAt": "2024-07-29T19:18:13.076994+02:00"
+            },
+            "srasearch-benchmark-finish": {
+                "name": "srasearch-benchmark-finish",
+                "type": "compute",
+                "command": {},
+                "parents": [
+                    "merge_00000022"
+                ],
+                "children": [
+                    "srasearch-benchmark-finish"
+                ],
+                "files": [
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000002_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2-build_00000001_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000002_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000004_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000004_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000006_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000006_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000008_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000008_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000010_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000010_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000012_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000012_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000014_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000014_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000016_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000016_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000018_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000018_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000020_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000020_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000011_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000003_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000025_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000047_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000041_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000044_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000023_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000015_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000013_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000035_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000031_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000021_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000046_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000029_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000027_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000038_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000033_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000007_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000009_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000005_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000019_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000017_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "bowtie2_00000039_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000024_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000024_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000026_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000026_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000028_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000028_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000030_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000030_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000032_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000032_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000034_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000034_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000036_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000036_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000037_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000037_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000040_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000040_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000042_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000042_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000043_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000043_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000045_input.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000045_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000048_output.txt",
+                        "sizeInBytes": 138889
+                    },
+                    {
+                        "link": "input",
+                        "name": "fasterq-dump_00000048_input.txt",
+                        "sizeInBytes": 138889
+                    }
+                ],
+                "runtimeInSeconds": 0,
+                "cores": 1,
+                "id": "50",
+                "category": "ending-workflow",
+                "startedAt": "2024-07-29T19:18:13.074043+02:00"
+            }
+        },
+        "workflow_data_locality": "../data",
+        "workflow_manager_data_locality": "/HSC/users/dasilvaa/wfbench/data",
+        "name": "srasearch-benchmark-knative"
+    }
+}

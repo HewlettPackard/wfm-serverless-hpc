@@ -1,0 +1,15 @@
+function_name,number_of_invocations
+soykb-benchmark-start,1
+alignment,13
+sort,13
+dedup,13
+add,13
+realign,13
+indel,13
+haplotype,150
+merge,1
+genotype,12
+combine,1
+select,2
+filtering,2
+soykb-benchmark-finish,1

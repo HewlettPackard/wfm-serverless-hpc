@@ -1,0 +1,6 @@
+function_name,number_of_invocations
+cycles-benchmark-start,1
+baseline,60
+cycles,127
+fertilizer,60
+cycles-benchmark-finish,1

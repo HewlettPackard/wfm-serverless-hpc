@@ -1,0 +1,138 @@
+# Copyright 2024 Hewlett Packard Enterprise Development LP.
+
+#!/bin/bash
+
+# List of commands to execute
+commands=(
+
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BlastRecipe-250-100/BlastRecipe-250-100.json BlastRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BlastRecipe-500-100/BlastRecipe-500-100.json BlastRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BlastRecipe-1000-100/BlastRecipe-1000-100.json BlastRecipe-1000-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BwaRecipe-250-100/BwaRecipe-250-100.json BwaRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BwaRecipe-500-100/BwaRecipe-500-100.json BwaRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BwaRecipe-1000-100/BwaRecipe-1000-100.json BwaRecipe-1000-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/CyclesRecipe-250-100/CyclesRecipe-250-100.json CyclesRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/CyclesRecipe-500-100/CyclesRecipe-500-100.json CyclesRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/CyclesRecipe-1000-100/CyclesRecipe-1000-100.json CyclesRecipe-1000-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/EpigenomicsRecipe-250-100/EpigenomicsRecipe-250-100.json EpigenomicsRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/EpigenomicsRecipe-500-100/EpigenomicsRecipe-500-100.json EpigenomicsRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/EpigenomicsRecipe-1000-100/EpigenomicsRecipe-1000-100.json EpigenomicsRecipe-1000-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/GenomeRecipe-250-100/GenomeRecipe-250-100.json GenomeRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/GenomeRecipe-500-100/GenomeRecipe-500-100.json GenomeRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/GenomeRecipe-1000-100/GenomeRecipe-1000-100.json GenomeRecipe-1000-100 1 knative"
+    
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/MontageRecipe-250-100/MontageRecipe-250-100.json MontageRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/MontageRecipe-500-100/MontageRecipe-500-100.json MontageRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/MontageRecipe-1000-100/MontageRecipe-1000-100.json MontageRecipe-1000-100 1 knative"
+    
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SeismologyRecipe-250-100/SeismologyRecipe-250-100.json SeismologyRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SeismologyRecipe-500-100/SeismologyRecipe-500-100.json SeismologyRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SeismologyRecipe-1000-100/SeismologyRecipe-1000-100.json SeismologyRecipe-1000-100 1 knative"
+    
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SoykbRecipe-250-100/SoykbRecipe-250-100.json SoykbRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SoykbRecipe-500-100/SoykbRecipe-500-100.json SoykbRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SoykbRecipe-1000-100/SoykbRecipe-1000-100.json SoykbRecipe-1000-100 1 knative"
+    
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SrasearchRecipe-250-100/SrasearchRecipe-250-100.json SrasearchRecipe-250-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SrasearchRecipe-500-100/SrasearchRecipe-500-100.json SrasearchRecipe-500-100 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SrasearchRecipe-1000-100/SrasearchRecipe-1000-100.json SrasearchRecipe-1000-100 1 knative"
+
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BlastRecipe-250-1000/BlastRecipe-250-1000.json BlastRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BlastRecipe-500-1000/BlastRecipe-500-1000.json BlastRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BlastRecipe-1000-1000/BlastRecipe-1000-1000.json BlastRecipe-1000-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BwaRecipe-250-1000/BwaRecipe-250-1000.json BwaRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BwaRecipe-500-1000/BwaRecipe-500-1000.json BwaRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/BwaRecipe-1000-1000/BwaRecipe-1000-1000.json BwaRecipe-1000-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/CyclesRecipe-250-1000/CyclesRecipe-250-1000.json CyclesRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/CyclesRecipe-500-1000/CyclesRecipe-500-1000.json CyclesRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/CyclesRecipe-1000-1000/CyclesRecipe-1000-1000.json CyclesRecipe-1000-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/EpigenomicsRecipe-250-1000/EpigenomicsRecipe-250-1000.json EpigenomicsRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/EpigenomicsRecipe-500-1000/EpigenomicsRecipe-500-1000.json EpigenomicsRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/EpigenomicsRecipe-1000-1000/EpigenomicsRecipe-1000-1000.json EpigenomicsRecipe-1000-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/GenomeRecipe-250-1000/GenomeRecipe-250-1000.json GenomeRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/GenomeRecipe-500-1000/GenomeRecipe-500-1000.json GenomeRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/GenomeRecipe-1000-1000/GenomeRecipe-1000-1000.json GenomeRecipe-1000-1000 1 knative"
+
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/MontageRecipe-250-1000/MontageRecipe-250-1000.json MontageRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/MontageRecipe-500-1000/MontageRecipe-500-1000.json MontageRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/MontageRecipe-1000-1000/MontageRecipe-1000-1000.json MontageRecipe-1000-1000 1 knative"
+    
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SeismologyRecipe-250-1000/SeismologyRecipe-250-1000.json SeismologyRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SeismologyRecipe-500-1000/SeismologyRecipe-500-1000.json SeismologyRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SeismologyRecipe-1000-1000/SeismologyRecipe-1000-1000.json SeismologyRecipe-1000-1000 1 knative"
+    
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SoykbRecipe-250-1000/SoykbRecipe-250-1000.json SoykbRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SoykbRecipe-500-1000/SoykbRecipe-500-1000.json SoykbRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SoykbRecipe-1000-1000/SoykbRecipe-1000-1000.json SoykbRecipe-1000-1000 1 knative"
+    
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SrasearchRecipe-250-1000/SrasearchRecipe-250-1000.json SrasearchRecipe-250-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SrasearchRecipe-500-1000/SrasearchRecipe-500-1000.json SrasearchRecipe-500-1000 1 knative"
+    "sleep 30s"
+    "python3 serverless-workflow-wfbench.py -r ../workflows/wfcommons/SrasearchRecipe-1000-1000/SrasearchRecipe-1000-1000.json SrasearchRecipe-1000-1000 1 knative"
+)
+
+# Loop through and execute each command
+for command in "${commands[@]}"; do
+    echo "Executing: $command"
+    eval "$command"
+    status=$?
+    if [ $status -ne 0 ]; then
+        echo "Command failed with status $status"
+        exit $status
+    fi
+done
+
+echo "All commands have finished executing"
