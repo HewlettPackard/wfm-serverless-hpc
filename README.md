@@ -2,7 +2,9 @@
 # Enabling HPC Scientific Workflows for Serverless 
 Repository for the paper: Enabling HPC Scientific Workflows for Serverless 
 
-Here is the description of each folder in this repository. 
+Here is the description of each folder in this repository. Our framework for managing HPC Scientific Workflows on Serverless is structured as follows:
+
+![framework](framework.png)
 
 ## Experiments
 
